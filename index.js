@@ -13,6 +13,10 @@ const cors = require("cors");
 server.use(helmet());
 server.use(cors());
 server.use(express.json());
+
+server.get("/", (req, res) => {
+	res.status(200).json({ server: "is now running! Good job you" });
+});
 //get all notes
 server.get("/notes", (req, res) => {
 	db("notes")
