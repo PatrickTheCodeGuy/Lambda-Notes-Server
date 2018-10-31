@@ -24,7 +24,7 @@ server.get("/notes", (req, res) => {
 			res.status(200).json(note);
 		})
 		.catch(err => {
-			res.status(400).json({ error: "Could not grab notes" });
+			res.status(400).json({ error: "Could not grab notes", err });
 		});
 });
 //GET one note by id
