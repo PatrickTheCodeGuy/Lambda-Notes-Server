@@ -1,7 +1,9 @@
 const express = require("express");
 const helmet = require("helmet");
 const knex = require("knex");
-const knexConfig = require("./knexfile.js");
+const dbEngine = process.env.DB || "production";
+const knexConfig = require("../knexfile.js")[dbEngine];
+
 const db = knex(knexConfig.development);
 const server = express();
 //const port = 3300;

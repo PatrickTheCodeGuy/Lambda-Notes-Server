@@ -1,3 +1,5 @@
+const dbConnection = process.env.DATABASE_URL;
+
 module.exports = {
 	development: {
 		client: "sqlite3",
@@ -5,5 +7,13 @@ module.exports = {
 			filename: "./data/notedb.sqlite3"
 		},
 		useNullAsDefault: true
+	},
+	production: {
+		client: "pg",
+		connection: dbConnection,
+		pool: {
+			min: 2,
+			max: 10
+		}
 	}
 };
