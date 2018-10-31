@@ -13,7 +13,11 @@ module.exports = {
 		connection: {
 			filename: "./data/notedb.sqlite3"
 		},
-		useNullAsDefault: true
+		useNullAsDefault: true,
+		migrations: {
+			tableName: "knex_migrations",
+			directory: "./data/migrations"
+		}
 	},
 	production: {
 		client: "pg",
@@ -22,6 +26,7 @@ module.exports = {
 			min: 2,
 			max: 10
 		},
+		useNullAsDefault: true,
 		migrations: {
 			tableName: "knex_migrations",
 			directory: "./data/migrations"
