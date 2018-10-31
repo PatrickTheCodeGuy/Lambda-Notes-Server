@@ -4,7 +4,8 @@ const knex = require("knex");
 const knexConfig = require("./knexfile.js");
 const db = knex(knexConfig.development);
 const server = express();
-const port = 3300;
+//const port = 3300;
+const port = process.env.PORT || 3300;
 const cors = require("cors");
 
 server.use(helmet());
