@@ -6,7 +6,7 @@
 	"author": "PatrickTheCodeGuy <patrick.jthompson93@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "nodemon index.js"
+		"start": "node index.js"
 	},
 	"dependencies": {
 		"axios": "^0.18.0",
