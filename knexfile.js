@@ -32,7 +32,7 @@ module.exports = {
 		useNullAsDefault: true,
 		migrations: {
 			tableName: "knex_migrations",
-			directory: "./data/data/migrations"
+			directory: "./data/migrations"
 		},
 		seeds: {
 			directory: "./data/data/seeds"
